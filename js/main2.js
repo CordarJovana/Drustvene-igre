@@ -158,9 +158,10 @@ const startGameAct = () => {
     return;}
     localStorage.setItem('listaIgraca', JSON.stringify(listaIgraca));
     //premestiMe
+    pokreniIgru()
     window.location.replace("igraActivity.html");
     //da li ce da radi zbog prelaza
-    pokreniIgru()
+    
 
 }
 const asocijacijeIgraj = () => {
@@ -181,7 +182,7 @@ function pokreniIgru(){
    // $('#unesiPapirice').button("loading");
     //promeni IP
     //ucitati ajax
-    $.get('http://172.20.222.216:8080/pokreniIgru',
+    $.get('http://pi-8.internet.elab.rs:5000/pokreniIgru',
     function(data) {
         if(data.poruka == "OK"){
             alert("Prvi tim je na potezu");

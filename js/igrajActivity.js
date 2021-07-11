@@ -147,7 +147,7 @@ function pokreniIgru(){
    // $('#unesiPapirice').button("loading");
     //promeni IP
     //ucitati ajax
-    $.get('http://172.20.222.216:8080/pokreniIgru',
+    $.get('http://pi-8.internet.elab.rs:5000/pokreniIgru',
     function(data) {
         if(data.poruka == "OK"){
             alert("Sledeci tim je na potezu");
@@ -157,7 +157,7 @@ function pokreniIgru(){
 //POST posalji pobednika
 function proglasiPobednika() {
     //data response da li radi
-    $.ajax({method:"http://172.20.222.216:8080/proglasiPobednika",data:{'data':listaKonacno.getList()[brojac].getTim()},
+    $.ajax({method:"http://pi-8.internet.elab.rs:5000/proglasiPobednika",data:{'data':listaKonacno.getList()[brojac].getTim()},
         success:function (data) {
             if(data.poruka == "OK") alert("Prikazuje Pobednika");
 
